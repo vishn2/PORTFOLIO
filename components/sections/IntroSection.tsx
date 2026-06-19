@@ -36,10 +36,9 @@ export default function IntroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <p className="font-display text-headline-lg text-white leading-tight">
-            Architecting resilient systems and crafting precise code. A
-            disciplined approach to modern IT infrastructure and software
-            development, focusing on performance, security, and elegant
-            structural design.
+           Hi, I'm Vishnu Vardhan Girada, a final-year B.Tech Information Technology 
+           student at Vellore Institute of Technology, Vellore,
+           passionate about building intelligent, scalable, and real-world tech solutions.
           </p>
         </motion.div>
       </div>
