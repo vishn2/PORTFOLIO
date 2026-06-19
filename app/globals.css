@@ -1,0 +1,150 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+/* ===== Base Styles ===== */
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+}
+
+body {
+  background-color: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #444748;
+}
+
+/* ===== 3D Card Tilt ===== */
+.perspective-container {
+  perspective: 1000px;
+}
+
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+}
+
+/* ===== Glassmorphism ===== */
+.glass {
+  background: rgba(19, 19, 19, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-strong {
+  background: rgba(19, 19, 19, 0.85);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== Glow Effects ===== */
+.glow-border {
+  position: relative;
+}
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    135deg,
+    rgba(198, 240, 255, 0.3),
+    rgba(212, 184, 255, 0.1),
+    rgba(198, 240, 255, 0.0),
+    rgba(212, 184, 255, 0.3)
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.glow-border:hover::before {
+  opacity: 1;
+}
+
+/* ===== Text Clip Reveal ===== */
+.clip-reveal {
+  clip-path: inset(0 0 100% 0);
+  animation: clipReveal 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes clipReveal {
+  to {
+    clip-path: inset(0 0 0% 0);
+  }
+}
+
+/* ===== Magnetic Button ===== */
+.magnetic-area {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Grayscale to Color ===== */
+.grayscale-hover {
+  filter: grayscale(100%);
+  transition: filter 0.7s ease, transform 1.5s ease;
+}
+.grayscale-hover:hover {
+  filter: grayscale(0%);
+}
+
+/* ===== Section Divider ===== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1) 20%,
+    rgba(255, 255, 255, 0.1) 80%,
+    transparent
+  );
+}
+
+/* ===== Canvas container ===== */
+.canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.canvas-container canvas {
+  pointer-events: none;
+}
+
+/* ===== Grid dot pattern ===== */
+.dot-pattern {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.03) 1px,
+    transparent 1px
+  );
+  background-size: 40px 40px;
+}
