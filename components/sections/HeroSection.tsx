@@ -38,7 +38,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Portfolio — 2024
+          Portfolio — 2026
         </motion.span>
 
         {/* Main Name */}
@@ -67,7 +67,7 @@ export default function HeroSection() {
         >
           <div className="w-12 h-px bg-surface-border" />
           <span className="font-body text-mono-tech text-muted-grey text-[10px] uppercase tracking-widest">
-            Est. 2021
+            Est. 2023
           </span>
           <div className="w-12 h-px bg-surface-border" />
         </motion.div>
